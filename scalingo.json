@@ -1,0 +1,25 @@
+{
+    "addons": ["redis:redis-sandbox"],
+    "description": "A simple Reverse Proxy for simple and pragmatic programmers",
+    "env": {
+      "BUILDPACK_URL": {
+        "description": "tell sclaingo how to run the application",
+        "value": "https://github.com/Scalingo/multi-buildpack.git"
+      },
+      "API_SECRET": {
+        "description": "HTTP Basic Password used by the API for authentication",
+        "generator": "secret"
+      }
+    },
+    "formation": {
+        "web": {
+            "amount": 2,
+            "size": "S"
+        }
+    },
+    "logo": "https://scalingo.com/logo.svg",
+    "name": "Simple Pragmatic Reverse Proxy",
+    "repository": "FIXME FIXME FIXME",
+    "stack": "salingo-18",
+    "website": "https://scalingo.com"
+  }
